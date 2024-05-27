@@ -43,6 +43,10 @@ fillter_local_biogas
 
 # 새로운 변수들의 다중공선성 확인
 ## 상관행렬
+# install.packages("ggcorrplot")
+library(ggcorrplot)
+# install.packages("corrplot")
+library(corrplot)
 cor(fillter_local_new_feature)
 corrplot(cor(fillter_local_new_feature), method='shade',type="lower", shade.col=NA, tl.col='black', tl.srt=15, tl.cex = 0.7)
 ## 다중회귀
@@ -80,4 +84,8 @@ finall_data <- fillter_local_new_feature[,c(1,2,5,6)]
 finall_data
 
 
+# 엑셀파일로 저장
+# install.packages("writexl")
+library(writexl)
+write_xlsx(finall_data_name, path = "C:/Users/User/Desktop/환경 공모전/6.새로운변수 추가(공선성 추가 확인)/최종요인.xlsx")
 
