@@ -7,7 +7,6 @@ full_data = read.xlsx("C:/Users/User/Desktop/2024 환경데이터 활용 및 분
 data = full_data[1:230, -c(1, 2, 3)]
 
 
-
 ## 변수선택법
 data2 = data[1:230, -c(7)]
 biogas = as.numeric(data[, 7])

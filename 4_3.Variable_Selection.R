@@ -84,3 +84,13 @@ factor_1
 factor_2 <- fillter_data[,1]*0.473 + fillter_data[,6]*0.765 + fillter_data[,7]*0.381
 factor_2
 
+
+# 요인분석을 통한 2개 요인과 추가적인 4개 요인을 합하여 새로운 데이터 셋 생성
+new_data_set <- cbind(full_data[1:230,1], factor_1, factor_2)
+new_data_set <- as.data.frame(new_data_set)
+
+# 엑셀파일로 저장
+# install.packages("writexl")
+library(writexl)
+write_xlsx(new_data_set, path = "C:/Users/User/Desktop/Environmental-Data-Analysis-Competition/4.Feature_Selection/factor12.xlsx")
+
